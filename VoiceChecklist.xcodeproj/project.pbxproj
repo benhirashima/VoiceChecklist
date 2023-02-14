@@ -1,0 +1,642 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B5BF095C2984D63400B0CAE5 /* VoiceChecklistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF095B2984D63400B0CAE5 /* VoiceChecklistApp.swift */; };
+		B5BF09602984D63500B0CAE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5BF095F2984D63500B0CAE5 /* Assets.xcassets */; };
+		B5BF09632984D63500B0CAE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5BF09622984D63500B0CAE5 /* Preview Assets.xcassets */; };
+		B5BF096D2984D63500B0CAE5 /* VoiceChecklistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF096C2984D63500B0CAE5 /* VoiceChecklistTests.swift */; };
+		B5BF09772984D63500B0CAE5 /* VoiceChecklistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF09762984D63500B0CAE5 /* VoiceChecklistUITests.swift */; };
+		B5BF09792984D63500B0CAE5 /* VoiceChecklistUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF09782984D63500B0CAE5 /* VoiceChecklistUITestsLaunchTests.swift */; };
+		B5BF09862984DA7C00B0CAE5 /* CListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF09852984DA7C00B0CAE5 /* CListsView.swift */; };
+		B5BF09872984DA7C00B0CAE5 /* CListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF09852984DA7C00B0CAE5 /* CListsView.swift */; };
+		B5BF09882984DA7C00B0CAE5 /* CListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF09852984DA7C00B0CAE5 /* CListsView.swift */; };
+		B5BF09902984DB8F00B0CAE5 /* CList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF098F2984DB8F00B0CAE5 /* CList.swift */; };
+		B5BF09912984DB8F00B0CAE5 /* CList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF098F2984DB8F00B0CAE5 /* CList.swift */; };
+		B5BF09922984DB8F00B0CAE5 /* CList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF098F2984DB8F00B0CAE5 /* CList.swift */; };
+		B5BF099C2985A73E00B0CAE5 /* CListPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF099B2985A73E00B0CAE5 /* CListPlay.swift */; };
+		B5BF099D2985A73E00B0CAE5 /* CListPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF099B2985A73E00B0CAE5 /* CListPlay.swift */; };
+		B5BF099E2985A73E00B0CAE5 /* CListPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF099B2985A73E00B0CAE5 /* CListPlay.swift */; };
+		B5BF09A02985CA0E00B0CAE5 /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF099F2985CA0E00B0CAE5 /* CheckboxView.swift */; };
+		B5BF09A12985CA0E00B0CAE5 /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF099F2985CA0E00B0CAE5 /* CheckboxView.swift */; };
+		B5BF09A22985CA0E00B0CAE5 /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF099F2985CA0E00B0CAE5 /* CheckboxView.swift */; };
+		B5BF09A6298B089300B0CAE5 /* CListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF09A5298B089300B0CAE5 /* CListStore.swift */; };
+		B5BF09A7298B089300B0CAE5 /* CListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF09A5298B089300B0CAE5 /* CListStore.swift */; };
+		B5BF09A9298EC67D00B0CAE5 /* BindingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF09A8298EC67C00B0CAE5 /* BindingProvider.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5BF09692984D63500B0CAE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5BF09502984D63400B0CAE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5BF09572984D63400B0CAE5;
+			remoteInfo = VoiceChecklist;
+		};
+		B5BF09732984D63500B0CAE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5BF09502984D63400B0CAE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5BF09572984D63400B0CAE5;
+			remoteInfo = VoiceChecklist;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B5BF09582984D63400B0CAE5 /* VoiceChecklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceChecklist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5BF095B2984D63400B0CAE5 /* VoiceChecklistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceChecklistApp.swift; sourceTree = "<group>"; };
+		B5BF095F2984D63500B0CAE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5BF09622984D63500B0CAE5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B5BF09682984D63500B0CAE5 /* VoiceChecklistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceChecklistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5BF096C2984D63500B0CAE5 /* VoiceChecklistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceChecklistTests.swift; sourceTree = "<group>"; };
+		B5BF09722984D63500B0CAE5 /* VoiceChecklistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceChecklistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5BF09762984D63500B0CAE5 /* VoiceChecklistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceChecklistUITests.swift; sourceTree = "<group>"; };
+		B5BF09782984D63500B0CAE5 /* VoiceChecklistUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceChecklistUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B5BF09852984DA7C00B0CAE5 /* CListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CListsView.swift; sourceTree = "<group>"; };
+		B5BF098F2984DB8F00B0CAE5 /* CList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CList.swift; sourceTree = "<group>"; };
+		B5BF099B2985A73E00B0CAE5 /* CListPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CListPlay.swift; sourceTree = "<group>"; };
+		B5BF099F2985CA0E00B0CAE5 /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
+		B5BF09A5298B089300B0CAE5 /* CListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CListStore.swift; sourceTree = "<group>"; };
+		B5BF09A8298EC67C00B0CAE5 /* BindingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingProvider.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5BF09552984D63400B0CAE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5BF09652984D63500B0CAE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5BF096F2984D63500B0CAE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B5BF094F2984D63400B0CAE5 = {
+			isa = PBXGroup;
+			children = (
+				B5BF095A2984D63400B0CAE5 /* VoiceChecklist */,
+				B5BF096B2984D63500B0CAE5 /* VoiceChecklistTests */,
+				B5BF09752984D63500B0CAE5 /* VoiceChecklistUITests */,
+				B5BF09592984D63400B0CAE5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5BF09592984D63400B0CAE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5BF09582984D63400B0CAE5 /* VoiceChecklist.app */,
+				B5BF09682984D63500B0CAE5 /* VoiceChecklistTests.xctest */,
+				B5BF09722984D63500B0CAE5 /* VoiceChecklistUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5BF095A2984D63400B0CAE5 /* VoiceChecklist */ = {
+			isa = PBXGroup;
+			children = (
+				B5BF098E2984DB7700B0CAE5 /* Models */,
+				B5BF095B2984D63400B0CAE5 /* VoiceChecklistApp.swift */,
+				B5BF09852984DA7C00B0CAE5 /* CListsView.swift */,
+				B5BF099B2985A73E00B0CAE5 /* CListPlay.swift */,
+				B5BF099F2985CA0E00B0CAE5 /* CheckboxView.swift */,
+				B5BF095F2984D63500B0CAE5 /* Assets.xcassets */,
+				B5BF09612984D63500B0CAE5 /* Preview Content */,
+			);
+			path = VoiceChecklist;
+			sourceTree = "<group>";
+		};
+		B5BF09612984D63500B0CAE5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B5BF09622984D63500B0CAE5 /* Preview Assets.xcassets */,
+				B5BF09A8298EC67C00B0CAE5 /* BindingProvider.swift */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B5BF096B2984D63500B0CAE5 /* VoiceChecklistTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5BF096C2984D63500B0CAE5 /* VoiceChecklistTests.swift */,
+			);
+			path = VoiceChecklistTests;
+			sourceTree = "<group>";
+		};
+		B5BF09752984D63500B0CAE5 /* VoiceChecklistUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B5BF09762984D63500B0CAE5 /* VoiceChecklistUITests.swift */,
+				B5BF09782984D63500B0CAE5 /* VoiceChecklistUITestsLaunchTests.swift */,
+			);
+			path = VoiceChecklistUITests;
+			sourceTree = "<group>";
+		};
+		B5BF098E2984DB7700B0CAE5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B5BF098F2984DB8F00B0CAE5 /* CList.swift */,
+				B5BF09A5298B089300B0CAE5 /* CListStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5BF09572984D63400B0CAE5 /* VoiceChecklist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5BF097C2984D63500B0CAE5 /* Build configuration list for PBXNativeTarget "VoiceChecklist" */;
+			buildPhases = (
+				B5BF09542984D63400B0CAE5 /* Sources */,
+				B5BF09552984D63400B0CAE5 /* Frameworks */,
+				B5BF09562984D63400B0CAE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VoiceChecklist;
+			productName = VoiceChecklist;
+			productReference = B5BF09582984D63400B0CAE5 /* VoiceChecklist.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5BF09672984D63500B0CAE5 /* VoiceChecklistTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5BF097F2984D63500B0CAE5 /* Build configuration list for PBXNativeTarget "VoiceChecklistTests" */;
+			buildPhases = (
+				B5BF09642984D63500B0CAE5 /* Sources */,
+				B5BF09652984D63500B0CAE5 /* Frameworks */,
+				B5BF09662984D63500B0CAE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5BF096A2984D63500B0CAE5 /* PBXTargetDependency */,
+			);
+			name = VoiceChecklistTests;
+			productName = VoiceChecklistTests;
+			productReference = B5BF09682984D63500B0CAE5 /* VoiceChecklistTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B5BF09712984D63500B0CAE5 /* VoiceChecklistUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5BF09822984D63500B0CAE5 /* Build configuration list for PBXNativeTarget "VoiceChecklistUITests" */;
+			buildPhases = (
+				B5BF096E2984D63500B0CAE5 /* Sources */,
+				B5BF096F2984D63500B0CAE5 /* Frameworks */,
+				B5BF09702984D63500B0CAE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5BF09742984D63500B0CAE5 /* PBXTargetDependency */,
+			);
+			name = VoiceChecklistUITests;
+			productName = VoiceChecklistUITests;
+			productReference = B5BF09722984D63500B0CAE5 /* VoiceChecklistUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5BF09502984D63400B0CAE5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					B5BF09572984D63400B0CAE5 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					B5BF09672984D63500B0CAE5 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = B5BF09572984D63400B0CAE5;
+					};
+					B5BF09712984D63500B0CAE5 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = B5BF09572984D63400B0CAE5;
+					};
+				};
+			};
+			buildConfigurationList = B5BF09532984D63400B0CAE5 /* Build configuration list for PBXProject "VoiceChecklist" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5BF094F2984D63400B0CAE5;
+			productRefGroup = B5BF09592984D63400B0CAE5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5BF09572984D63400B0CAE5 /* VoiceChecklist */,
+				B5BF09672984D63500B0CAE5 /* VoiceChecklistTests */,
+				B5BF09712984D63500B0CAE5 /* VoiceChecklistUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5BF09562984D63400B0CAE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5BF09632984D63500B0CAE5 /* Preview Assets.xcassets in Resources */,
+				B5BF09602984D63500B0CAE5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5BF09662984D63500B0CAE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5BF09702984D63500B0CAE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5BF09542984D63400B0CAE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5BF095C2984D63400B0CAE5 /* VoiceChecklistApp.swift in Sources */,
+				B5BF099C2985A73E00B0CAE5 /* CListPlay.swift in Sources */,
+				B5BF09862984DA7C00B0CAE5 /* CListsView.swift in Sources */,
+				B5BF09A6298B089300B0CAE5 /* CListStore.swift in Sources */,
+				B5BF09A02985CA0E00B0CAE5 /* CheckboxView.swift in Sources */,
+				B5BF09A9298EC67D00B0CAE5 /* BindingProvider.swift in Sources */,
+				B5BF09902984DB8F00B0CAE5 /* CList.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5BF09642984D63500B0CAE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5BF09872984DA7C00B0CAE5 /* CListsView.swift in Sources */,
+				B5BF099D2985A73E00B0CAE5 /* CListPlay.swift in Sources */,
+				B5BF096D2984D63500B0CAE5 /* VoiceChecklistTests.swift in Sources */,
+				B5BF09A7298B089300B0CAE5 /* CListStore.swift in Sources */,
+				B5BF09A12985CA0E00B0CAE5 /* CheckboxView.swift in Sources */,
+				B5BF09912984DB8F00B0CAE5 /* CList.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5BF096E2984D63500B0CAE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5BF09922984DB8F00B0CAE5 /* CList.swift in Sources */,
+				B5BF099E2985A73E00B0CAE5 /* CListPlay.swift in Sources */,
+				B5BF09792984D63500B0CAE5 /* VoiceChecklistUITestsLaunchTests.swift in Sources */,
+				B5BF09772984D63500B0CAE5 /* VoiceChecklistUITests.swift in Sources */,
+				B5BF09A22985CA0E00B0CAE5 /* CheckboxView.swift in Sources */,
+				B5BF09882984DA7C00B0CAE5 /* CListsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5BF096A2984D63500B0CAE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5BF09572984D63400B0CAE5 /* VoiceChecklist */;
+			targetProxy = B5BF09692984D63500B0CAE5 /* PBXContainerItemProxy */;
+		};
+		B5BF09742984D63500B0CAE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5BF09572984D63400B0CAE5 /* VoiceChecklist */;
+			targetProxy = B5BF09732984D63500B0CAE5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B5BF097A2984D63500B0CAE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B5BF097B2984D63500B0CAE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5BF097D2984D63500B0CAE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VoiceChecklist/Preview Content\"";
+				DEVELOPMENT_TEAM = Y7R4545F8N;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Voice Checklist";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "The microphone is used to let you check off items by saying \"check\"";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Speech recognition is used to let you check off items by saying \"check\".";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.puffy.VoiceChecklist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5BF097E2984D63500B0CAE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VoiceChecklist/Preview Content\"";
+				DEVELOPMENT_TEAM = Y7R4545F8N;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Voice Checklist";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "The microphone is used to let you check off items by saying \"check\"";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Speech recognition is used to let you check off items by saying \"check\".";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.puffy.VoiceChecklist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B5BF09802984D63500B0CAE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y7R4545F8N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.puffy.VoiceChecklistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VoiceChecklist.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VoiceChecklist";
+			};
+			name = Debug;
+		};
+		B5BF09812984D63500B0CAE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y7R4545F8N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.puffy.VoiceChecklistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VoiceChecklist.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VoiceChecklist";
+			};
+			name = Release;
+		};
+		B5BF09832984D63500B0CAE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y7R4545F8N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.puffy.VoiceChecklistUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VoiceChecklist;
+			};
+			name = Debug;
+		};
+		B5BF09842984D63500B0CAE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y7R4545F8N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.puffy.VoiceChecklistUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VoiceChecklist;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5BF09532984D63400B0CAE5 /* Build configuration list for PBXProject "VoiceChecklist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5BF097A2984D63500B0CAE5 /* Debug */,
+				B5BF097B2984D63500B0CAE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5BF097C2984D63500B0CAE5 /* Build configuration list for PBXNativeTarget "VoiceChecklist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5BF097D2984D63500B0CAE5 /* Debug */,
+				B5BF097E2984D63500B0CAE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5BF097F2984D63500B0CAE5 /* Build configuration list for PBXNativeTarget "VoiceChecklistTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5BF09802984D63500B0CAE5 /* Debug */,
+				B5BF09812984D63500B0CAE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5BF09822984D63500B0CAE5 /* Build configuration list for PBXNativeTarget "VoiceChecklistUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5BF09832984D63500B0CAE5 /* Debug */,
+				B5BF09842984D63500B0CAE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5BF09502984D63400B0CAE5 /* Project object */;
+}
