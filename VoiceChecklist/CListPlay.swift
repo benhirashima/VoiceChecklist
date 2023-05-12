@@ -166,18 +166,19 @@ struct CListPlay: View {
     @State private var newItemTitle = ""
     let saveClists: ()->Void
     @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
-    @Environment(\.editMode) private var editMode
+    // we're not using the editMode environment variable because: https://medium.com/geekculture/swiftui-and-the-intermittent-editmode-b714c923f536
+    @State var editMode: EditMode = .inactive
     @StateObject var voiceMan: VoiceManager
     let addCList: (CList?)->Void
     @FocusState private var isNewItemFieldFocused: Bool
        
     private func enterEditMode() {
         voiceMan.isCanceled = true
-        self.editMode?.wrappedValue = .active
+        editMode = .active
     }
     
     private func exitEditMode() {
-        self.editMode?.wrappedValue = .inactive
+        editMode = .inactive
         newItemTitle = ""
         isNewItemFieldFocused = false
         addCList(clist)
@@ -199,37 +200,49 @@ struct CListPlay: View {
                         TextField("Checklist title", text: $clist.title)
                             .font(.title)
                             .fontWeight(.light)
-                            .disabled(self.editMode?.wrappedValue == .inactive)
+                            .disabled(editMode == .inactive)
                         
                     } icon : {
-                        if self.editMode?.wrappedValue == .inactive {
+                        if editMode == .inactive {
                             let status = clist.getCheckedStatus()
                             Image(systemName: clist.getCheckIconName(status: status, differentiateWithoutColor: differentiateWithoutColor))
                                 .foregroundColor(clist.getCheckIconColor(status: status))
                         }
                     }
-                    if !clist.items.isEmpty || self.editMode?.wrappedValue == .active { // hide list if empty, otherwise we see a white area that we can't change the color of
+                    if !clist.items.isEmpty || editMode == .active { // hide list if empty, otherwise we see a white area that we can't change the color of
                         List {
-                            ForEach($clist.items) { $item in
-                                if self.editMode?.wrappedValue == .active {
+                            if editMode == .active {
+                                ForEach($clist.items) { $item in
                                     TextField("Item Name", text: $item.title)
                                         .padding(.leading)
                                         .listRowBackground(Color(.clear))
                                         .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                                } else {
+                                }
+                                .onDelete { indices in
+                                    voiceMan.isCanceled = true
+                                    clist.items.remove(atOffsets: indices)
+                                }
+                                .onMove { source, dest in
+                                    voiceMan.isCanceled = true
+                                    clist.items.move(fromOffsets: source, toOffset: dest)
+                                }
+                            } else {
+                                // we are repeating the code below to work around a bug.
+                                // the test for editMode cannot be inside the ForEach loop for some reason.
+                                ForEach($clist.items) { $item in
                                     CheckboxView(item: $item)
-                                        .listRowBackground(Color(.clear))
+                                            .listRowBackground(Color(.clear))
+                                }
+                                .onDelete { indices in
+                                    voiceMan.isCanceled = true
+                                    clist.items.remove(atOffsets: indices)
+                                }
+                                .onMove { source, dest in
+                                    voiceMan.isCanceled = true
+                                    clist.items.move(fromOffsets: source, toOffset: dest)
                                 }
                             }
-                            .onDelete { indices in
-                                voiceMan.isCanceled = true
-                                clist.items.remove(atOffsets: indices)
-                            }
-                            .onMove { source, dest in
-                                voiceMan.isCanceled = true
-                                clist.items.move(fromOffsets: source, toOffset: dest)
-                            }
-                            if self.editMode?.wrappedValue == .active {
+                            if editMode == .active {
                                 HStack {
                                     TextField("New Item", text: $newItemTitle)
                                         .padding(.leading, 20.0)
@@ -255,6 +268,7 @@ struct CListPlay: View {
                         }
                         .padding([.bottom, .trailing])
                         .listStyle(PlainListStyle())
+                        .environment(\.editMode, $editMode)
                     } else {
                         Spacer()
                     }
@@ -266,7 +280,7 @@ struct CListPlay: View {
                 .toolbarColorScheme(.dark, for: .navigationBar)
                 .background(Color("ListBackgroundColor")) // background color outside the list view
                 .fontWeight(.light)
-                if self.editMode?.wrappedValue == .inactive {
+                if editMode == .inactive {
                     Button(action: {
                         if voiceMan.isRunning {
                             voiceMan.isCanceled = true
@@ -296,7 +310,7 @@ struct CListPlay: View {
                 }
             }
             .toolbar {
-                if self.editMode?.wrappedValue == .inactive {
+                if editMode == .inactive {
                     Button(action: {
                         $clist.items.forEach { $item in
                             item.isChecked = false
