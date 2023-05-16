@@ -57,7 +57,7 @@ struct CListsView: View {
             ZStack(alignment: .topLeading) {
                 List {
                     ForEach($checklists) { $clist in
-                        NavigationLink(destination: CListPlay(clist: $clist, saveClists: saveClists, voiceMan: VoiceManager(clist: $clist), addCList: {_ in })) {
+                        NavigationLink(destination: CListPlay(clist: $clist, saveClists: saveClists, voiceMan: VoiceManager.createVoiceManager(clist: $clist), addCList: {_ in })) {
                             HStack {
                                 let status = clist.getCheckedStatus()
                                 Image(systemName: clist.getCheckIconName(status: status, differentiateWithoutColor: differentiateWithoutColor))
@@ -97,7 +97,7 @@ struct CListsView: View {
                 }
                 .accessibilityLabel("New Checklist")
                 .navigationDestination(isPresented: $isShowingAddClistView) {
-                    CListPlay(clist: $newCList, saveClists: saveClists, voiceMan: VoiceManager(clist: $newCList), addCList: {
+                    CListPlay(clist: $newCList, saveClists: saveClists, voiceMan: VoiceManager.createVoiceManager(clist: $newCList), addCList: {
                         if let clist = $0 {
                             checklists.append(clist)
                         }

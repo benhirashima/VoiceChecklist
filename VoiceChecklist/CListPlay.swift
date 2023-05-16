@@ -14,16 +14,26 @@ class VoiceManager: ObservableObject {
     @Published var isRunning: Bool
     @Published var isCanceled = false
     @Published var recogText = ""
-    let voiceStyle = AVSpeechSynthesisVoice()
-    let speechSynth = AVSpeechSynthesizer()
-    let speechRecognizer = SFSpeechRecognizer()
+    var voiceStyle: AVSpeechSynthesisVoice
+    var speechSynth: AVSpeechSynthesizer
+    var speechRecognizer: SFSpeechRecognizer
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
-    private let audioEngine = AVAudioEngine()
+    var audioEngine: AVAudioEngine
+    var audioSession: AVAudioSession
     private var isCheckHeard = false
     
-    init(clist: Binding<CList>) {
+    static func createVoiceManager(clist: Binding<CList>) -> VoiceManager {
+        return VoiceManager(clist: clist, speechRecognizer: SFSpeechRecognizer()!, speechSynth: AVSpeechSynthesizer(), voiceStyle: AVSpeechSynthesisVoice(), audioEngine: AVAudioEngine(), audioSession: AVAudioSession())
+    }
+    
+    init(clist: Binding<CList>, speechRecognizer: SFSpeechRecognizer, speechSynth: AVSpeechSynthesizer, voiceStyle: AVSpeechSynthesisVoice, audioEngine: AVAudioEngine, audioSession: AVAudioSession) {
         self._clist = clist
+        self.speechRecognizer = speechRecognizer
+        self.speechSynth = speechSynth
+        self.voiceStyle = voiceStyle
+        self.audioEngine = audioEngine
+        self.audioSession = audioSession
         self.isRunning = false
     }
     
@@ -35,7 +45,6 @@ class VoiceManager: ObservableObject {
         recognitionTask?.cancel()
         self.recognitionTask = nil
         
-        let audioSession = AVAudioSession.sharedInstance()
         let inputNode = audioEngine.inputNode
         let recordingFormat = inputNode.outputFormat(forBus: 0)
         
@@ -87,7 +96,7 @@ class VoiceManager: ObservableObject {
             }
         }
         
-        if ((speechRecognizer?.isAvailable) != nil) {
+        if (speechRecognizer.isAvailable) {
             _ = Task() {
                 for index in clist.items.indices {
                     if self.isCanceled { break }
@@ -104,7 +113,7 @@ class VoiceManager: ObservableObject {
                                             
                     configRecogRequest()
                     
-                    recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest!) { result, error in
+                    recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest!) { result, error in
                         if (self.isCanceled) {
                             cancelVoiceRecog()
                         }
@@ -357,7 +366,7 @@ struct CListPlay_Previews: PreviewProvider {
     static var previews: some View {
         BindingProvider(CList.sampleData[0]) { binding in
             NavigationStack {
-                CListPlay(clist: binding, saveClists: {}, voiceMan: VoiceManager(clist: binding), addCList: {_ in })
+                CListPlay(clist: binding, saveClists: {}, voiceMan: VoiceManager.createVoiceManager(clist: binding), addCList: {_ in })
             }
         }
     }
